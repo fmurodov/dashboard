@@ -14,9 +14,11 @@ Squid admin:
   * restart service
 
 ## setup
+```bash
 echo "##dashboard
 www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/mod_ftp/ftp-pw.sh
 www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/mod_squid/squid_serv.sh" >> /etc/sudoers
+```
 
 
 
