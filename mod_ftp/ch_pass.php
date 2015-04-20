@@ -21,11 +21,14 @@ require_once '../auth.php';?>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+<!--<div class="container">-->
+<!--    <!-- Static navbar -->-->
+<!--    <nav class="navbar navbar-default">-->
+<!--        <div class="container-fluid">-->
+<!--            <div class="navbar-header">-->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -53,6 +56,7 @@ require_once '../auth.php';?>
         </div><!--/.container-fluid -->
     </nav>
     <div class="jumbotron">
+        <div class="container">
         <p>Change password</p>
         <?
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
