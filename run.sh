@@ -22,9 +22,6 @@ case "$1" in
   ftpd_who)
     pure-ftpwho
     ;;
-   ftpd_reload)
-    ${PURE_FTPD_INIT} reload
-    ;;
   ftpd_restart)
     ${PURE_FTPD_INIT} restart
     ;;
