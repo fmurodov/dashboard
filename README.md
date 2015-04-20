@@ -1,8 +1,22 @@
 # dashboard
-Linux server admin panel
+### Linux server admin panel 
+
+Pure-FTPd admin:
+ * create users
+ * delete users
+ * change password
+ * restart service
+ 
+Squid admin:
+  * add url or regex to deny_list
+  * del from deny_list
+  * reload service
+  * restart service
 
 ## setup
-visudo
-www-data ALL=(ALL:ALL) NOPASSWD:/home/firdavs/250GB/www/squid-webui/squid_serv.sh
-www-data ALL=(ALL:ALL) NOPASSWD:/var/www/ftpd-webui/ftp-pw.sh
+echo "##dashboard
+www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/mod_ftp/ftp-pw.sh
+www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/mod_squid/squid_serv.sh" >> /etc/sudoers
+
+
 
