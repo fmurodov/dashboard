@@ -39,6 +39,7 @@ require_once '../auth.php';?>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="?block-list">List blocked</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">manage <span class="caret"></span></a>
@@ -70,12 +71,12 @@ require_once '../auth.php';?>
         }
         // squid reload
         function squid_serv_reload(){
-            $reload=exec("sudo ../run.sh squid_reload");
+            $reload=exec("sudo ./squid_serv.sh reload");
             echo $reload;
         }
         // squid restart
         function squid_serv_restart(){
-            $restart=exec("sudo ./run.sh squid_restart");
+            $restart=exec("sudo ./squid_serv.sh restart");
             echo $restart;
         }
         if (isset($_GET['block-list'])) {

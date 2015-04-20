@@ -43,7 +43,6 @@ require_once '../auth.php';?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">manage <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="divider"></li>
                             <li><a href="add_block.php">add block</a></li>
                             <li><a href="del_block.php">del block</a></li>
                         </ul>
