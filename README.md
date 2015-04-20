@@ -32,10 +32,10 @@ www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/run.sh" >> /etc/sudoers
 ln -s mod_squid/deny.txt /etc/squid3/deny.txt
 ```
 #### add acl to /etc/squid3/squid.conf
-`
-acl block_sites url_regex -i "/etc/squid3/limit/deny.txt"
-http_access deny localnet block_sites
-`
+
+`acl block_sites url_regex -i "/etc/squid3/limit/deny.txt"`  
+`http_access deny localnet block_sites`
+
 
 
 
