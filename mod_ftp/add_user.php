@@ -58,7 +58,7 @@ require_once '../auth.php';?>
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user=$_POST['inputName'];
             $pass=$_POST['inputPassword'];
-            exec("sudo ./ftp-pw.sh create $user $pass");
+            exec("sudo ../run.sh ftpd_create $user $pass");
         }
         ?>
         <form  method="POST" action="<?=$_SERVER['PHP_SELF']?>">

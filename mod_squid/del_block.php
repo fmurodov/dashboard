@@ -68,12 +68,12 @@ require_once '../auth.php';?>
         }
         // squid reload
         function squid_serv_reload(){
-            $reload=exec("sudo ./squid_serv.sh reload");
+            $reload=exec("sudo ../run.sh squid_reload");
             echo $reload;
         }
         // squid restart
         function squid_serv_restart(){
-            $restart=exec("sudo ./squid_serv.sh restart");
+            $restart=exec("sudo ../run.sh squid_restart");
             echo $restart;
         }
 

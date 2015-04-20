@@ -58,7 +58,7 @@ require_once '../auth.php';?>
         <?php
         // list ftp users
         function ftp_list() {
-            $str=shell_exec('sudo ./ftp-pw.sh list');
+            $str=shell_exec('sudo ../run.sh ftpd_list');
             $arr = explode("\n",$str);
             for($i = 0; $i < count($arr); $i++)
             {
@@ -67,7 +67,7 @@ require_once '../auth.php';?>
         }
 
         function ftp_serv_reload(){
-            $reload=exec("sudo ./ftp-pw.sh restart");
+            $reload=exec("sudo ../run.sh ftpd_restart");
             echo $reload;
         }
 

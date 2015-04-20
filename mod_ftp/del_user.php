@@ -57,7 +57,7 @@ require_once '../auth.php';?>
         <?
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user=$_POST['inputName'];
-            exec("sudo ./ftp-pw.sh remove $user");
+            exec("sudo ../run.sh ftpd_remove $user");
         }
         ?>
         <form  method="POST" action="<?=$_SERVER['PHP_SELF']?>">
