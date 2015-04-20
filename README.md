@@ -21,6 +21,10 @@ cd /var/www
 git clone https://github.com/firdavsich/dashboard.git
 cd dashboard
 ```
+#### change owner to directory
+```bash
+chown -R www-data.www-data /var/www/dashboard/
+```
 #### make executable dashboard/run.sh and add to sudoers
 ```bash
 chmod +x run.sh
