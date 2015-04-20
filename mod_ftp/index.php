@@ -40,7 +40,8 @@ require_once '../auth.php';?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">manage <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href='?ftp-reload'>restart service</a></li>
+                            <li><a href='?ftp-reload'>reload service</a></li>
+                            <li><a href='?ftp-restart'>restart service</a></li>
                             <li class="divider"></li>
                             <li><a href="add_user.php">add user</a></li>
                             <li><a href="del_user.php">dell user</a></li>
@@ -67,6 +68,10 @@ require_once '../auth.php';?>
         }
 
         function ftp_serv_reload(){
+            $reload=exec("sudo ../run.sh ftpd_reload");
+            echo $reload;
+        }
+        function ftp_serv_restart(){
             $reload=exec("sudo ../run.sh ftpd_restart");
             echo $reload;
         }
@@ -76,6 +81,9 @@ require_once '../auth.php';?>
         }
         elseif (isset($_GET['ftp-reload'])) {
             ftp_serv_reload();
+        }
+        elseif (isset($_GET['ftp-restart'])) {
+            ftp_serv_restart();
         }
         ?>
     </div>

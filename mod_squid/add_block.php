@@ -40,8 +40,8 @@ require_once '../auth.php';?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">manage <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href='?squid-restart'>restart service</a></li>
-                            <li><a href='?squid-reload'>reload service</a></li>
+<!--                            <li><a href='?squid-restart'>restart service</a></li>-->
+<!--                            <li><a href='?squid-reload'>reload service</a></li>-->
                             <li class="divider"></li>
                             <li><a href="add_block.php">add block</a></li>
                             <li><a href="del_block.php">del block</a></li>
@@ -69,26 +69,26 @@ require_once '../auth.php';?>
             }
 
         }
-        // squid reload
-        function squid_serv_reload(){
-            $reload=exec("sudo ../run.sh squid_reload");
-            echo $reload;
-        }
-        // squid restart
-        function squid_serv_restart(){
-            $restart=exec("sudo ../run.sh squid_restart");
-            echo $restart;
-        }
+//        // squid reload
+//        function squid_serv_reload(){
+//            $reload=exec("sudo ../run.sh squid_reload");
+//            echo $reload;
+//        }
+//        // squid restart
+//        function squid_serv_restart(){
+//            $restart=exec("sudo ../run.sh squid_restart");
+//            echo $restart;
+//        }
 
         if (isset($_GET['block-list'])) {
             block_list();
         }
-        elseif (isset($_GET['squid-reload'])) {
-            squid_serv_reload();
-        }
-        elseif (isset($_GET['squid-restart'])) {
-            squid_serv_restart();
-        }
+//        elseif (isset($_GET['squid-reload'])) {
+//            squid_serv_reload();
+//        }
+//        elseif (isset($_GET['squid-restart'])) {
+//            squid_serv_restart();
+//        }
         ?>
 
         <?
