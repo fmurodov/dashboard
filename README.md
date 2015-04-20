@@ -14,11 +14,28 @@ Squid admin:
   * restart service
 
 ## setup
+
+#### clone repository
 ```bash
-echo "##dashboard
-www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/mod_ftp/ftp-pw.sh
-www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/mod_squid/squid_serv.sh" >> /etc/sudoers
+cd /var/www
+git clone https://github.com/firdavsich/dashboard.git
+cd dashboard
 ```
+#### make executable dashboard/run.sh and add to sudoers
+```bash
+chmod +x run.sh
+echo "##dashboard
+www-data ALL=(ALL:ALL) NOPASSWD:/var/www/dashboard/run.sh" >> /etc/sudoers
+```
+#### make symlink block list file to squid directory
+```bash
+ln -s mod_squid/deny.txt /etc/squid3/deny.txt
+```
+#### add acl to /etc/squid3/squid.conf
+`
+acl block_sites url_regex -i "/etc/squid3/limit/deny.txt"
+http_access deny localnet block_sites
+`
 
 
 
