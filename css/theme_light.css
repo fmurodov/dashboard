@@ -1,6 +1,6 @@
 body {
     padding-top: 50px;
-    background-color: #fff;
+    background-color: #eee;
     color: #9d9d9d;
 }
 .starter-template {
@@ -9,6 +9,6 @@ body {
 
 }
 .form-control {
-    background-color: #222;
-    border: 1px solid #424242;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
