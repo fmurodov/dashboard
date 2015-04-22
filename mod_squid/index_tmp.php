@@ -19,11 +19,18 @@
     <link rel="icon" href="../favicon.ico">
     <title>Starter Template for Bootstrap</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/theme.css" rel="stylesheet">
+    <link href="../css/theme_dark.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+<?php
+if ($theme == 'dark') {
+    echo '<nav class="navbar navbar-inverse navbar-fixed-top">' ;
+}
+else {
+    echo '<nav class="navbar navbar-default navbar-fixed-top">' ;
+}
+?>
+<div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>

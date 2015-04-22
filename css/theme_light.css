@@ -1,0 +1,14 @@
+body {
+    padding-top: 50px;
+    background-color: #fff;
+    color: #9d9d9d;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+
+}
+.form-control {
+    background-color: #222;
+    border: 1px solid #424242;
+}
