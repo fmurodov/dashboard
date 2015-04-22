@@ -12,13 +12,12 @@ require_once '../auth.php';?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="ftp add user">
     <meta name="author" content="Firdavs Murodov">
     <link rel="icon" href="../favicon.ico">
     <title>FTP admin | add user</title>
-    <!-- Bootstrap core CSS -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -50,9 +49,8 @@ require_once '../auth.php';?>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
-
-    <div class="jumbotron">
-        <div class="container">
+<div class="container">
+    <div class="starter-template">
         <p>Create user</p>
         <?
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -70,9 +68,6 @@ require_once '../auth.php';?>
         </form>
     </div>
 </div> <!-- /container -->
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="../js/jquery.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>

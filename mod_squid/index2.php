@@ -12,13 +12,12 @@ require_once '../auth.php';?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Squid admin">
     <meta name="author" content="Firdavs Murodov">
     <link rel="icon" href="../favicon.ico">
     <title>Squid admin</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/starter-template.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -48,7 +47,6 @@ require_once '../auth.php';?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../">exit</a></li>
-            </ul>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

@@ -19,7 +19,7 @@
     <link rel="icon" href="../favicon.ico">
     <title>Starter Template for Bootstrap</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/starter-template.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
